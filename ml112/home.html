@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<!-- saved from url=(0012)about:srcdoc -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  
+<link rel="apple-touch-icon" type="image/png" href="../ASSET/kirtivardhansingh.jpg">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="../ASSET/kirtivardhansingh.jpg">
+
+<link rel="mask-icon" type="" href="../ASSET/kirtivardhansingh.jpg" color="#111">
+
+
+  <title>REGISTRATIONS OPEN</title>
+  
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  
+<style>
+html, body {
+  height: 100%;
+  overflow: ;
+}
+
+.error-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.error-page h1 {
+  font-size: 30vh;
+  font-weight: bold;
+  position: relative;
+  margin: -8vh 0 0;
+  padding: 0;
+}
+.error-page h1:after {
+  content: attr(data-h1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: transparent;
+  /* webkit only for graceful degradation to IE */
+  background: -webkit-repeating-linear-gradient(-45deg, #71b7e6, #69a6ce, #b98acc, #ee8176, #b98acc, #69a6ce, #9b59b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400%;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.25);
+  animation: animateTextBackground 10s ease-in-out infinite;
+}
+.error-page h1 + p {
+  color: #d6d6d6;
+  font-size: 8vh;
+  font-weight: bold;
+  line-height: 10vh;
+  max-width: 600px;
+  position: relative;
+}
+.error-page h1 + p:after {
+  content: attr(data-p);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: transparent;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+
+
+@keyframes animateTextBackground {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0 100%;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+@media (max-width: 767px) {
+  .error-page h1 {
+    font-size: 32vw;
+  }
+  .error-page h1 + p {
+    font-size: 8vw;
+    line-height: 10vw;
+    max-width: 70vw;
+  }
+}
+
+a.back {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  background: -webkit-repeating-linear-gradient(-45deg, #71b7e6, #69a6ce, #b98acc, #ee8176);
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px;
+  padding: 15px 30px;
+  text-decoration: none;
+  transition: 0.25s all ease-in-out;
+}
+a.back:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/**/
+/* Fill button styling */
+.fill {
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 50px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.fill::after {
+  content: "";
+  background-color: #ffe54c;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.fill:hover::after {
+  top: 0px;
+  left: 0px;
+}
+/* End of Fill Button  */
+/* Sweep To Right */
+.hvr-sweep-to-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-sweep-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+  color: white;
+}
+.hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
+.filtering {
+  width: 100%;
+  padding: 25px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: -moz-box;
+  display: -webkit-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+
+
+.portfolio-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: inherit;
+  list-style: none;
+  height: 60px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 33%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-left: 0;
+}
+
+.no-flexbox .portfolio-navigation {
+  display: inherit;
+}
+
+.portfolio-navigation li {
+  cursor: pointer;
+  padding: 7px 14px;
+  border: 1.5px solid #6f6f6f;
+  color: #6f6f6f;
+  font-weight: 700;
+}
+
+.portfolio-navigation li.active {
+  background: #6f6f6f;
+  color: #fff;
+}
+
+.portfolio .hvr-sweep-to-right:before {
+  background: #6f6f6f;
+}
+
+.portfolio .hvr-sweep-to-right.active:before {
+  background: transparent;
+}
+</style>
+
+ <link rel="stylesheet" href="../assets/combined.css">
+
+ <!--Bootstrap Core CSS -->
+ <link href="./assets/bootstrap.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="./font-mfizz-2.4.1/font-mfizz.css">
+  <!-- Custom Fonts -->
+  <link href="../assets/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="../assets/font-mfizz.css" rel="stylesheet" type="text/css">
+  <link href="../assets/css.css" rel="stylesheet" type="text/css">
+  <link href="../assets/simple-line-icons.css" rel="stylesheet">
+  <link href="../assets/css(1).css" rel="stylesheet" type="text/css">
+  <link href="../assets/css(2).css" rel="stylesheet" type="text/css">
+  <link href="../assets/css(3).css" rel="stylesheet" type="text/css">
+  <link href="../assets/css(4).css" rel="stylesheet" type="text/css">
+
+  <!-- Custom CSS -->
+ <link href="./assets/combined.css" rel="stylesheet">
+ <link href="./assets/additional.css" rel="styleshet">
+
+  
+
+
+</head>
+
+<body  >
+  
+    
+<div style="  background: -webkit-repeating-linear-gradient(-45deg, #71b7e6, #69a6ce, #b98acc, #ee8176);">
+    
+  <section class="content-section" id="projects">
+        <div class="container">
+          <div class="content-section-heading text-center">
+           
+            <h2 class="mb-2">Personal Projects</h2>
+          </div>
+          <div class="container text-center mb-5">
+            <p class="lead">Here you can see some of the projects I've done on my own time.</p>
+            <p class="lead">(Somewhat outdated, will update soon.)</p>
+          </div>
+
+          
+          <div class="filtering wow fadeInUp" data-wow-duration="1.5s" style=" width: 100%; visibility: visible; animation-duration: 1.5s; animation-name: fadeInUp;">
+            <ul class="portfolio-navigation">
+              <li data-filter="all" class="hvr-sweep-to-right active"> All Items </li>
+              <li data-filter="1" class="hvr-sweep-to-right"> Week 1 </li>
+              <li data-filter="2" class="hvr-sweep-to-right"> Week 2 </li>
+              <li data-filter="3" class="hvr-sweep-to-right"> Week 3 </li>
+              <li data-filter="4" class="hvr-sweep-to-right"> Week 4 </li>
+            </ul>
+          </div>
+
+
+          <div class="row no-gutters" >
+            <div class="col-lg-4" data-category="1">
+              <a class="portfolio-item" data-toggle="modal" href="#portfolioModal1">
+                
+                    <h4>ACE Empathetic Bot</h4>
+                    <p class="mb-0">Empathetic Chat Bot which can help users in dealing with emotional stress.</p>
+                
+              </a>
+            </div>
+            
+            <div class="col-lg-4" data-category="2">
+              <a class="portfolio-item" data-toggle="modal" href=" #portfolioModal2">
+               
+                    <h4 data-category="2">Inventory Management System</h4>
+                    <p class="mb-0">The main objective includes Generation of Invoices, records of transactions & inventory, Tracking Customer Behavior.</p>
+                
+              </a>
+            </div>
+            <div class="col-lg-4" data-category="3">
+              <a class="portfolio-item" data-toggle="modal" href=" #portfolioModal3">
+                
+                    <h4>Sanskrit-Devanagari Text Generator </h4>
+                    <p class="mb-0">On going project for Devnagari text generation.</p>
+               
+              </a>
+             </div>
+            
+             <div class="col-lg-4" data-category="4">
+              
+                <span class="caption">
+                  <span class="caption-content">
+                  </span>
+                </span>
+              </a>
+            </div>
+
+             <div class="col-lg-4" data-category="1">
+              <a class="portfolio-item" data-toggle="modal" href=" #portfolioModal4">
+                    <h4>cat non-cat classifier</h4>
+                    <p class="mb-0">Neural Network Implementation of Image classifier with multiple hidden layers.</p>
+              </a>
+            </div>
+            
+          </div>
+        </div>
+        <div class="container text-center mt-5">
+          <p class="lead">In my free time, I continue to work on personal projects and have many ideas just waiting to be realized.</p>
+        </div>
+        <div class="container text-center mt-5">
+          <h2 class="mb-4">To see more of my projects...</h2>
+          <a href="https://github.com/ikirtivardhansingh" class="btn btn-xl btn-dark" target="blank">Visit My GitHub &nbsp;<i class="fa fa-github"></i></a>
+          <!--<a href="#" class="btn btn-xl btn-dark">View Project Demos</a>-->
+        </div>
+      </section>
+</div>
+      <div class="footer">
+
+      </div>
+
+
+</body>
+<script type="text/javascript" src="./ASSET/jquery.filterizr.min.js.download"></script>
+ 
+</html>
