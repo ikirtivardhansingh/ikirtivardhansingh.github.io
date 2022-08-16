@@ -718,7 +718,7 @@ input:checked + label span:last-child {
 
 .mobile-menu {
   display: none;
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   height: 55px;
