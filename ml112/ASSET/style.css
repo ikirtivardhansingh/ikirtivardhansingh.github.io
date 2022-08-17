@@ -1727,3 +1727,19 @@ textarea.form-control::-webkit-input-placeholder,
 /*--------------------------------
    End Contact
 ----------------------------------*/
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.menu-item-wrapper {
+  z-index: 99999;
+  padding: 1rem 7vw;
+  background-color: #fff;
+}
+.hide {
+  display: none;
+}
+.menu-item {
+  padding: 0 0.5rem;
+}
