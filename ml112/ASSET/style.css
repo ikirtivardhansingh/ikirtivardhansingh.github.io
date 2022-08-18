@@ -679,7 +679,7 @@ input:checked + label span:last-child {
 }
 
 .desktop-menu .hvr-underline-from-left:before {
-  bottom: 11px;
+  bottom: 0.5px;
   height: 2.5px;
 }
 
@@ -814,7 +814,7 @@ input:checked + label span:last-child {
 .menu-link.active span {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  top: 50%;
+  top: 80%;
 }
 
 .menu-link.active span:first-child {
@@ -1735,11 +1735,5 @@ textarea.form-control::-webkit-input-placeholder,
 .menu-item-wrapper {
   z-index: 99999;
   padding: 1rem 7vw;
-  background-color: #fff;
-}
-.hide {
-  display: none;
-}
-.menu-item {
-  padding: 0 0.5rem;
+  background-color:  #313131;
 }
