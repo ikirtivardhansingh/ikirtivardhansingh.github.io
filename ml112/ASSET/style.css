@@ -449,7 +449,7 @@ input:checked + label span:last-child {
 }
 
 .last-name {
-  font-size: 100px;
+  font-size: 50px;
   font-weight: 600;
   line-height: 0;
   margin-top: 40px;
@@ -1727,3 +1727,19 @@ textarea.form-control::-webkit-input-placeholder,
 /*--------------------------------
    End Contact
 ----------------------------------*/
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.menu-item-wrapper {
+  z-index: 99999;
+  padding: 1rem 7vw;
+  background-color: #fff;
+}
+.hide {
+  display: none;
+}
+.menu-item {
+  padding: 0 0.5rem;
+}
