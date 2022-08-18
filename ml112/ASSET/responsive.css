@@ -230,6 +230,8 @@
   }
   .mobile-menu {
     display: block;
+    z-index: 2;
+    z-index: 1;
   }
   .menu-container {
     justify-content: flex-end;
