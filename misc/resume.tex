@@ -1,0 +1,253 @@
+%-------------------------
+% Resume in Latex
+% Author : Kirtivardha Singh
+% License : MIT
+%------------------------
+
+\documentclass[A4,10.8pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{.9in}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-2pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \justifying\item\small{
+    \textbf{#1}{ #2 \vspace{-0.9pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \justifying\textbf{#1} & #2 \\
+      \justifying\textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{0pt}
+}
+
+\newcommand{\resumeSubPosition}[2]{
+  \vspace{-5pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\justifying\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}
+
+\newcommand{\resumeSubHeadingListEnd}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumesubItemListStart}{\begin{itemize}}
+\newcommand{\resumesubItemListEnd}{\end{itemize}\vspace{-1pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{center}
+  \textbf{{\LARGE Kirtivardhan Singh}} \\
+  \href{mailto:ikirtivardhansingh@gmail.com}{ikirtivardhasingh@gmail.com} •
+  \href{https://ikirtivardhansingh.github.io/}{iKirtivardhansingh.github.io} • +91-888 230 3056 
+  \href{https://github.com/ikirtivardhansingh}{ • github.com/ikirtivardhansingh} \\
+\end{center}
+      
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading{Guru Gobind Singh Indraprastha University}{New Delhi}  {Bachelors in Computer Applications(8.75/10)} { 2019 -  2022}
+    \resumeItemListStart
+    \small{\textbf{Coursework: }}{Data Structures, Computer Networks, Machine Learning, Linear Algebra, Calculus, and Software Engineering}
+           \resumeItemListEnd
+  \resumeSubHeadingListEnd
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading{Deloitte}{Mumbai, Maharashtra}{Associate Analyst}{December 2022 - Present}
+    \resumeItemListStart
+ \resumeItem{Salesforce Development:} 
+          {Designed and implemented custom functionalities within the Salesforce platform utilizing Apex, LWC and other Salesforce technologies to address unique client needs. Led the integration of Salesforce CRM with Deloitte’s in-house tool, ensuring seamless generation of custom LWC cmponents.}
+          \resumeItem{Consulting:}
+          {Collaborated closely with clients to understand their requirements and provide technical guidance and recommendations on Salesforce best practices and solutions.}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+		{VIPS- Technical Campus, GGSIP University}{New Delhi, Delhi}
+		{Teaching Assistant}{February 2022 - June 2022}
+		\resumeItemListStart
+        \resumeItem{ML112:}
+          {Delivered two-months-long bootcamp for machine learning and artificial intelligence as the lead instructor. Taught DSE-A (Data Science and Analytics) and DSE-B (Artificial Intelligence)  to a class of 120 students.}        
+		\resumeItemListEnd
+
+    \resumeSubheading
+		{INMAS, DRDO, Ministry of Defense}{New Delhi, Delhi}
+		{Research Intern}{November 2021 - March 2022}
+		\resumeItemListStart
+        \resumeItem{Research Work:}
+          {Worked around EEG and fNIRS where the goal was to develop a pipeline for ‘Real-Time Mental State and Stress Estimation on System on Chip (SoC) hardware.’  }
+        
+        \resumeItem{Data Collection:}
+          {Performed data collection from the scalp of over 200+ people while they perform certain tasks in virtual environment. This activity was done in supervision of the biomedical team.} 
+		\resumeItemListEnd
+    \resumeSubheading
+        {TEDxVIPS}{New Delhi, Delhi, India}
+        {Execution Team Lead and Event Manager}{January 2021- March 2021}
+        \resumeItemListStart
+        \resumeItem{Event Management:}
+          {Coordinated one-day event execution, contributing to production and planning efficiency. Oversaw urgent requirements and provided timely solutions for event flow disruptions. } 
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------Leadership and Services-----------------
+\section{Leadership and Services}
+\resumeSubHeadingListStart
+\resumeSubheading
+		{HackVSIT}{New Delhi}{Powered by ACE and MLH}{Jan 2020-Dec 2022}
+        \resumeSubPosition
+		{Lead Organizer and Executive Board Member}{2022}
+		\resumeItemListStart
+         
+            \resumeItem{Edition 4:}
+                  {Oversaw multiple teams to ensure the seamless progression of deliverables within planned timelines for the hackathon. Organized multiple developer meetups across Delhi NCR to promote HackVSIT and actively encouraged student participation in hackathons. Hosted 800 people from 7 coutries during this Hackathon.}        
+        \resumeItemListEnd
+ \resumeSubPosition
+		{Organizing Committee Member}{2020}
+		\resumeItemListStart
+         \resumeItem{Edition 3:}
+                  {Responsible for offline marketing and sponsorship in the West and South Delhi regions, successfully securing sponsorships totaling 80K INR by the third and final cycle of the sponsorship drive. Collaborated with a team of 17 individuals to promote and maximize registrations through our online portal. }  
+             \resumeItemListEnd
+                    
+\resumeSubheading
+		{Association of Computer Enthusiasts}{New Delhi, Delhi}{President}{July 2022 - December 2023}
+		\resumeItemListStart 
+            \resumeItem{Organizational Goals:}
+                  {Executed organizational and departmental procedures, goals, and policies. Promoted community collaboration with other developers’ communities in Delhi-NCR and across India.}        
+             \resumeItem{Conduction of Events:}
+                  {Responsible for organizing more than twenty-five talks and three major technical events. Served as Lead Organizer and Executive Board Member for HackVSIT 4th edition. Collaborated with teams from different domains for the Leadership Enhancement Program.}   
+            
+        \resumeItemListEnd
+\resumeSubPosition
+		{R\&D Team Head}{July 2021 - July 2022}
+		\resumeItemListStart
+         
+            \resumeItem{Training:}
+                  {Facilitated weekly training sessions focused on Research \& Development in cyber security, machine learning, artificial intelligence, etc., among students in collaboration with alumni and industry experts.}        
+            \resumeItem{Execution}
+                  {Responsible for promoting quality research activities environment.}  
+
+        \resumeItemListEnd
+        
+\resumeSubPosition
+		{Machine Learning Team Mentor}{November 2020- July 2021}
+		\resumeItemListStart
+         
+            \resumeItem{Projects:}
+                  {Trained teams on Signal Processing. Lead instructor in Annual A.I. awareness week. Developed an Empathetic bot with the team. Responsible for analyzing project reports for research and mentoring more than three hundred students.}          		   
+        \resumeItemListEnd
+\resumeSubPosition
+		{Member}{August 2019 - November 2020}
+		\resumeItemListStart
+         
+            \resumeItem{}
+                  {Organized \& coordinated Annual Technical Day 2019 \& Code Quest. Performed responsibilities as the Event manager for MLH Localhost on Cloud Computing. }         
+
+        \resumeItemListEnd
+
+\resumeSubheading
+		{Deloitte }{Mumbai, Maharashtra}{Cluster Lead}{}
+		\resumeItemListStart 
+                  \resumeItem{Social Impact:}
+          {As cluster lead for Deloitte's impact program, utilized technical skills to support NGOs and educational institutions, fostering environmental sustainability and educational initiatives, showcasing dedication to social impact and sustainability. }
+                    \resumeItemListEnd
+                    
+\resumeSubHeadingListEnd
+
+%--------PROGRAMMING SKILLS------------
+\section{Technical Skills}
+	\resumesubItemListStart
+            \resumeSubItem{Programming Languages}{C/C++, JavaScript, and SQL }
+            \resumeSubItem{Tools}{VS code, Git, Jupyter, Google Colab, Salesforce, Jira}
+            \resumeSubItem{Technical Skills}{ Neural Networks, Salesforce, Quality Assurance}
+\resumesubItemListEnd
+
+%-----------PROJECTS-----------------
+\section{Professional Development }
+	\resumesubItemListStart
+\resumeSubItem{Salesforce Certified Platform Developer-1}
+
+\resumeSubItem{Salesforce Certified A.I. Associate}
+
+\resumeSubItem{{Deloitte + Google:}} {{Google Cloud Generative AI Specialist}}
+
+\resumeSubItem{Salesforce Certified Administrator}
+
+\resumeSubItem{{Stanford + Coursera Machine Learning Specialization}}{{}}
+
+
+\resumesubItemListEnd
+
+%-------------------------------------------
+%-----------Languages \& Interests-----------------
+
+\section{Languages and Interests}
+	\resumesubItemListStart
+            \resumeSubItem{Languages}{Hindi, English , Sanskrit}
+            \resumeSubItem{Interests}{Music- Vocal and Instruments, and Table Tennis}
+
+\resumesubItemListEnd
+
+%-------------------------------------------
+%-----------Projects-----------------
+
+\section{Projects and Initiatives }
+\resumesubItemListStart
+   \resumeSubItem{Cognitive Intelligent Agent Mapping Rover}{In this project, the intention was to create an end-to-end pipeline of an autonomous rover with almost 56\% of accuracy.}
+   \resumeSubItem{Sanskrit Devanagari Text Generator for Vedic Text}{A tool which can generate and convert 'Devanagari' script to other scripts like Roman or IAST.}
+   \resumeSubItem{ACE Empathetic Bot}{The goal of the project was to see the improvement in a chatbot based on only negative feedback. }
+   \resumeSubItem{Small-Scale Inventory Management System}{This project was made to solve the issue of small-scale businesses in northern India during the Pademic in 2020 and provide them a tool by which they can manage their inventory easily without the traditional 'bahi' method.}
+   \resumeSubItem{Real-Time Mental State Estimation on SoC}{Please see the experience column.}
+   \resumeSubItem{Target following Car}{}
+\resumesubItemListEnd   
+
+%-------------------------------------------
+
+\end{document}

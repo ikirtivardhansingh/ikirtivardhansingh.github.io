@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Description Generator</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.button-group {
+    text-align: center;
+}
+
+.button-group button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    transition: transform 0.2s ease;
+}
+
+.button-group button.active {
+    background-color: #3b8e56;
+    transform: scale(1.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="button"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #008CBA;
+    color: white;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#copyButton {
+    display: block;
+    margin: 20px auto;
+}
+
+.small-text {
+    font-size: smaller;
+    color: grey;
+    font-style: italic;
+    margin-top: 10px; /* Add margin at the top */
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Description Generator</h1>
+    <div class="button-group">
+        <button id="fieldButton" onclick="setType('field')">Field</button>
+        <button id="flowButton" onclick="setType('flow')">Flow</button>
+    </div>
+    <form id="dataForm">
+        <div class="form-group">
+            <label for="inputObjectName">Enter Object Name:</label>
+            <input type="text" id="inputObjectName" name="inputObjectName" required>
+        </div>
+        <div class="form-group" id="fieldNameGroup">
+            <label for="inputFieldName">Enter Field Name:</label>
+            <input type="text" id="inputFieldName" name="inputFieldName" required>
+        </div>
+        <div class="form-group" id="functionalityInput" style="display: none;">
+            <label for="inputFunctionality">Enter Functionality:</label>
+            <input type="text" id="inputFunctionality" name="inputFunctionality">
+        </div>
+        <button type="button" onclick="generateOutput()">Generate Output</button>
+        <div class="small-text">You can edit the output as per your need.</div>
+    </form>
+    <textarea id="output" rows="6"></textarea>
+    <button id="copyButton" onclick="copyOutput()">Copy Output</button>
+</div>
+
+<script>
+function setType(type) {
+    var fieldNameGroup = document.getElementById('fieldNameGroup');
+    var functionalityInput = document.getElementById('functionalityInput');
+    var fieldButton = document.getElementById('fieldButton');
+    var flowButton = document.getElementById('flowButton');
+    
+    if (type === 'flow') {
+        fieldNameGroup.style.display = 'none';
+        functionalityInput.style.display = 'block';
+        fieldButton.classList.remove('active');
+        flowButton.classList.add('active');
+    } else {
+        fieldNameGroup.style.display = 'block';
+        functionalityInput.style.display = 'none';
+        flowButton.classList.remove('active');
+        fieldButton.classList.add('active');
+    }
+}
+
+function generateOutput() {
+    var objectName = document.getElementById('inputObjectName').value;
+    var output = '';
+    if (document.getElementById('functionalityInput').style.display === 'block') {
+        var functionality = document.getElementById('inputFunctionality').value;
+        output = 'This flow is used to perform ' + functionality + ' functionality on ' + objectName + '. This flow is used to drive ' + objectName + ' related functionality in the LA digital procurement application.';
+    } else {
+        var fieldName = document.getElementById('inputFieldName').value;
+        output = 'This field is used to capture ' + fieldName + ' data on ' + objectName + ' object. This field is used to drive ' + objectName + ' related functionality in the LA digital procurement application.';
+    }
+    document.getElementById('output').value = output;
+}
+
+function copyOutput() {
+    var outputText = document.getElementById('output').value;
+    var tempInput = document.createElement("textarea");
+    tempInput.value = outputText;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+}
+</script>
+
+</body>
+</html>
