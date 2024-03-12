@@ -58,7 +58,7 @@ function startGame() {
     }
 
     localStorage.setItem('players', JSON.stringify(players));
-    window.location.href = 'Game.html';
+    window.location.href = 'game.html';
 }
 
 function generateQuestion() {
