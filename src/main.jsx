@@ -1,23 +1,10 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import "./index.css";
 
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-
-function App() {
-  return (
-    <div>
-      <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <Contact />
-    </div>
-  );
-}
-
-export default App;
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);

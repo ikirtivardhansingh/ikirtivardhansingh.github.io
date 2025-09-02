@@ -1,17 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-
+import Navbar from "./Navbar";
+import Hero from "./Hero";
+import About from "./About";
+import Projects from "./Projects";
 
 function App() {
   return (
-    <section id="home">
-    <div>
-      <h1>Hello, this is my portfolio 🚀</h1>
+    <div className="pt-20">
+      <Navbar />
+      <Hero />
+      <About/>
+      <Projects />
     </div>
-    </section>
   );
 }
 
 export default App;
-
