@@ -11,7 +11,7 @@ export default function Projects() {
             src="https://via.placeholder.com/400x250"
             alt="Project 1"
           />
-          <h3>Portfolio Website</h3>
+          <h3>Cognitive Intelligent Agent Mapping Rover</h3>
           <p>
             A personal portfolio built with React showcasing my skills,
             projects, and experience.
@@ -27,7 +27,7 @@ export default function Projects() {
             src="https://via.placeholder.com/400x250"
             alt="Project 2"
           />
-          <h3>Todo App</h3>
+          <h3>Sanskrit Devanagari Text Generator for Vedic Text</h3>
           <p>
             A simple yet powerful todo application with features like add,
             delete, and filter tasks.

@@ -89,7 +89,7 @@ nav ul li a:hover {
 
 .hero-text a {
   padding: 12px 24px;
-  background: #007bff;
+  background: #ffffff5e;
   color: #000000;
   border-radius: 6px;
   text-decoration: none;
@@ -109,7 +109,12 @@ nav ul li a:hover {
 }
 
 .hero-image img:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
+}
+
+.button {
+  background: #bc3030;
+  color: #bc3030;
 }
 
 /* ===== About Section ===== */
