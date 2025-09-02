@@ -21,5 +21,5 @@ export default function Typewriter({ words, speed = 1500 }) {
     return () => clearInterval(interval);
   }, [index, words, speed]);
 
-  return <span style={{ color: "#fff", fontWeight: "bold" }}>{displayed}</span>;
+  return <span style={{ color: "#f39c12", fontWeight: "bold" }}>{displayed}</span>;
 }

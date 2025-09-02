@@ -53,7 +53,7 @@ nav ul li a:hover {
   padding: 80px 10%;
   min-height: 100vh;
   color: white;
-  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
+  background: linear-gradient(-45deg, #f7bec0, #fad0c4, #a18cd1, #fbc2eb);
   background-size: 400% 400%;
   animation: gradientMove 15s ease infinite;
 }
@@ -72,10 +72,11 @@ nav ul li a:hover {
   font-size: 3rem;
   margin-bottom: 20px;
   text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+  color: #000000;
 }
 
 .hero-text h1 span {
-  color: #fff;
+  color: #ffffff;
 }
 
 .hero-text p {
@@ -83,12 +84,13 @@ nav ul li a:hover {
   margin-bottom: 30px;
   line-height: 1.6;
   text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+  color: #ffffff;
 }
 
 .hero-text a {
   padding: 12px 24px;
   background: #007bff;
-  color: #fff;
+  color: #000000;
   border-radius: 6px;
   text-decoration: none;
   font-size: 1rem;
