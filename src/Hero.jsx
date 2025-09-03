@@ -9,14 +9,14 @@ export default function Hero() {
       
       <p>
         A passionate developer building modern <br></br>experiences with{" "}
-      <Typewriter words={["ML", "Salesforce", "JavaScript", "React", "Node.js"]} />
+      <Typewriter words={["Machine Learning", "NLP", "Salesforce", "C++", "React.js", "Node.js"]} />
       </p>
-        <a href="#about" class="button">Learn More</a>
+        <a href="#about" class="button"><b>Learn More</b></a>
       </div>
 
       {/* Right Side - Image */}
       <div className="hero-image">
-      <a href=""> <img
+      <a href="https://www.linkedin.com/in/kirtivardhansingh/" target="blank"> <img
           src="/src/assets/20241124_2018223234.jpg"
           alt="Kirtivardhan Singh"
         /></a>

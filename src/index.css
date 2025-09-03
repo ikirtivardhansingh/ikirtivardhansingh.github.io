@@ -65,11 +65,11 @@ nav ul li a:hover {
 }
 
 .hero-text {
-  flex: 1;
+  flex: ;
 }
 
 .hero-text h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 20px;
   text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
   color: #000000;
@@ -80,7 +80,7 @@ nav ul li a:hover {
 }
 
 .hero-text p {
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   margin-bottom: 30px;
   line-height: 1.6;
   text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
