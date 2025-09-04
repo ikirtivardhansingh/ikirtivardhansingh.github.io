@@ -1,4 +1,5 @@
 import Typewriter from "./Typewriter";
+import { Element } from "react-scroll";
 
 export default function Hero() {
   return (
