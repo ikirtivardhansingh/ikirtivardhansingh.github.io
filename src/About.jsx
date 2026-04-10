@@ -8,7 +8,7 @@ export default function About() {
         a passionate <strong>Developer</strong> with experience in building scalable
         applications and crafting delightful user experiences.  
         Skilled in Machine learning, Deep Learning, Salesforce, JavaScript, 
-        and backend technologies — I love solving problems and creating
+        and backend technologies. I love solving problems and creating
         impactful products.
       </p>
     </section>

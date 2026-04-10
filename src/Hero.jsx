@@ -10,7 +10,7 @@ export default function Hero() {
       
       <p>
         A passionate developer building modern <br></br>experiences with{" "}
-      <Typewriter words={["Machine Learning", "NLP", "Salesforce", "C++", "React.js", "Node.js"]} />
+      <Typewriter words={["Machine Learning", "NLP", "Python", "Salesforce", "JavaScript", "TypeScript", "C++", "React.js", "Node.js"]} />
       </p>
         <a href="#about" class="button"><b>Learn More</b></a>
       </div>
