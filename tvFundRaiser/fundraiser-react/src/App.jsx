@@ -1,5 +1,5 @@
 export default function ThiruvelukkaiFundraiser() {
-  const raised = 11000;
+  const raised = 16000;
   const goal = 2000000;
 
   const percentage = Math.min((raised / goal) * 100, 100);
