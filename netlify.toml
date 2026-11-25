@@ -1,0 +1,6 @@
+# TanStack Start self-hosting on Netlify (same setup as the other working projects).
+# The Nitro "netlify" preset (set in vite.config.ts) writes static assets to dist/
+# and the SSR function to .netlify/functions-internal/.
+[build]
+  command = "bun run build"
+  publish = "dist"
