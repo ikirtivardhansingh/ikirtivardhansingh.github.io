@@ -2,8 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { editorialBody } from "@/portfolio/body";
 
-const TITLE = "Kirtivardhan Singh — Software Developer & NLP Researcher";
-const DESC = "Portfolio of Kirtivardhan Singh: natural language processing, computational philology, neuro-symbolic systems and software engineering.";
+const TITLE = "Kirtivardhan Singh ";
+const DESC = "Portfolio Kirtivardhan Singh: natural language processing, computational philology, neuro-symbolic systems and software engineering.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
