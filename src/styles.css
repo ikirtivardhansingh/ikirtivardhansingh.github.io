@@ -1,8 +1,8 @@
 @import "tailwindcss" source(none);
-@source "../src";
+
 @import "tw-animate-css";
 @import "./portfolio/editorial.css";
-
+@source "../src";
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
