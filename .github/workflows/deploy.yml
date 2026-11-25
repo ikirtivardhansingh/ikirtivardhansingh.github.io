@@ -1,8 +1,8 @@
-name: Deploy to GitHub Pages
+name: Deploy TanStack Start to GitHub Pages
 
 on:
   push:
-    branches: ["main"] # or master
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -12,11 +12,14 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -29,18 +32,31 @@ jobs:
       - name: Install dependencies
         run: bun install
 
-      - name: Build and generate static site
+      - name: Build project
+        run: bun run build
+
+      - name: Generate static index.html from SSR build
         run: |
-          bun run build
-          # Prerender or generate static index.html into dist/client
+          # Start preview server in background
+          bunx vite preview --port 4173 &
+          PREVIEW_PID=$!
+          
+          # Wait for preview server to come up
+          sleep 4
+          
+          # Render the page directly into dist/client/index.html
+          curl -s http://127.0.0.1:4173 > dist/client/index.html
+          
+          # Kill preview process
+          kill $PREVIEW_PID || true
+          
+          # Add .nojekyll so GitHub Pages doesn't ignore asset folders
+          touch dist/client/.nojekyll
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Upload artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'dist/client'
+          path: dist/client
 
       - name: Deploy to GitHub Pages
         id: deployment
