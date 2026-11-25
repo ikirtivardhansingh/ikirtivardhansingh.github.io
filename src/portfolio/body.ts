@@ -338,7 +338,7 @@ export const editorialBody = `
       <div class="border-t border-b editorial-divider py-9 space-y-4">
         <div class="flex items-baseline justify-between">
           <h2 id="education-heading" class="font-serif text-2xl sm:text-3xl font-semibold text-[var(--text-primary)]">
-            Academic Foundation
+            Education
           </h2>
           <span class="font-mono text-xs text-[var(--text-muted)]">June 2022</span>
         </div>

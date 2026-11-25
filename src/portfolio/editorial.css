@@ -157,16 +157,22 @@
     /* ===================================================================== */
     /* FLOATING INDIC GLYPH ANIMATION (VANIC CARD HOVER)                     */
     /* ===================================================================== */
-    .vanic-stage {
+     .vanic-stage {
       position: relative;
     }
 
     .vanic-glyph-layer {
       position: absolute;
-      inset: -44px -32px;
+      inset: -40px -80px;
       pointer-events: none;
       overflow: visible;
-      z-index: 20;
+      z-index: 0;
+    }
+
+       .editorial-card {
+      position: relative;
+      z-index: 10;
+      background: var(--bg-card);
     }
 
     .floating-glyph {
@@ -177,12 +183,14 @@
       line-height: 1;
       opacity: 0;
       will-change: transform, opacity;
-      animation: indicFloat var(--dur, 3.6s) cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      animation: indicFloat var(--dur, 3.8s) cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
     }
+
+
 
     .floating-glyph.devanagari {
       font-family: 'Noto Serif Devanagari', serif;
-      color: rgba(45, 106, 79, 0.58);
+      color: rgba(35, 65, 77, 0.54);
     }
 
     .floating-glyph.tamil {
@@ -201,18 +209,18 @@
     @keyframes indicFloat {
       0% {
         opacity: 0;
-        transform: translate3d(0, 8px, 0) scale(0.92) rotate(var(--rot-start, -2deg));
+        transform: translate3d(0, 10px, 0) scale(0.9) rotate(var(--rot-start, -4deg));
       }
-      18% {
-        opacity: var(--peak-opacity, 0.72);
+      20% {
+        opacity: var(--peak-opacity, 0.35);
       }
-      65% {
-        opacity: var(--peak-opacity, 0.65);
-        transform: translate3d(var(--dx-mid, 12px), var(--dy-mid, -28px), 0) scale(1.02) rotate(var(--rot-mid, 2deg));
+      70% {
+        opacity: var(--peak-opacity, 0.3);
+        transform: translate3d(var(--drift-mid-x, 14px), var(--drift-mid-y, -30px), 0) scale(1.04) rotate(var(--rot-mid, 2deg));
       }
       100% {
         opacity: 0;
-        transform: translate3d(var(--dx-end, -6px), var(--dy-end, -58px), 0) scale(1.06) rotate(var(--rot-end, -1deg));
+        transform: translate3d(var(--drift-end-x, -8px), var(--drift-end-y, -65px), 0) scale(1.08) rotate(var(--rot-end, -2deg));
       }
     }
 
@@ -220,10 +228,6 @@
       .floating-glyph {
         animation: none !important;
         display: none !important;
-      }
-      .editorial-card:hover,
-      .btn:hover {
-        transform: none !important;
       }
     }
   

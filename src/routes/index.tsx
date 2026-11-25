@@ -2,8 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { editorialBody } from "@/portfolio/body";
 
-const TITLE = "Kirtivardhan Singh ";
-const DESC = "Portfolio Kirtivardhan Singh: natural language processing, computational philology, neuro-symbolic systems and software engineering.";
+const TITLE = "Kirtivardhan Singh · Software Developer & NLP Researcher";
+const DESC = "Portfolio of Kirtivardhan Singh: natural language processing, computational philology, neuro-symbolic systems and software engineering.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -28,4 +28,213 @@ function Index() {
   return <div className="antialiased overflow-x-hidden" dangerouslySetInnerHTML={{ __html: editorialBody }} />;
 }
 
-const SCRIPT = "\n\n      /* --------------------------------------------------------------------- */\n      /* 1. Light / Dark Mode Toggle with Persistence                          */\n      /* --------------------------------------------------------------------- */\n      const htmlEl = document.documentElement;\n      const themeToggleBtn = document.getElementById('theme-toggle');\n      const iconSun = document.getElementById('icon-sun');\n      const iconMoon = document.getElementById('icon-moon');\n\n      function syncThemeIcons() {\n        const isDark = htmlEl.classList.contains('dark');\n        iconSun.classList.toggle('hidden', !isDark);\n        iconMoon.classList.toggle('hidden', isDark);\n      }\n\n      syncThemeIcons();\n\n      themeToggleBtn.addEventListener('click', function () {\n        htmlEl.classList.toggle('dark');\n        syncThemeIcons();\n        try {\n          localStorage.setItem('ks-parchment-theme', htmlEl.classList.contains('dark') ? 'dark' : 'light');\n        } catch (err) {\n          /* Ignore storage errors */\n        }\n      });\n\n      /* --------------------------------------------------------------------- */\n      /* 2. Mobile Navigation Drawer                                           */\n      /* --------------------------------------------------------------------- */\n      const mobileMenuBtn = document.getElementById('mobile-menu-btn');\n      const mobileMenu = document.getElementById('mobile-menu');\n      const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');\n\n      mobileMenuBtn.addEventListener('click', function () {\n        const isOpen = !mobileMenu.classList.contains('hidden');\n        mobileMenu.classList.toggle('hidden');\n        mobileMenuBtn.setAttribute('aria-expanded', String(!isOpen));\n      });\n\n      mobileNavLinks.forEach(function (link) {\n        link.addEventListener('click', function () {\n          mobileMenu.classList.add('hidden');\n          mobileMenuBtn.setAttribute('aria-expanded', 'false');\n        });\n      });\n\n      /* --------------------------------------------------------------------- */\n      /* 3. One-Click Email Copy (iFrame-safe via document.execCommand)        */\n      /* --------------------------------------------------------------------- */\n      const copyEmailBtn = document.getElementById('copy-email-btn');\n      const copyToast = document.getElementById('copy-toast');\n      let toastTimer = null;\n\n      copyEmailBtn.addEventListener('click', function () {\n        try {\n          const temp = document.createElement('textarea');\n          temp.value = 'ikirtivardhan@gmail.com';\n          temp.setAttribute('readonly', '');\n          temp.style.position = 'absolute';\n          temp.style.left = '-9999px';\n          document.body.appendChild(temp);\n          temp.select();\n          document.execCommand('copy');\n          document.body.removeChild(temp);\n\n          copyToast.classList.remove('hidden');\n          if (toastTimer) clearTimeout(toastTimer);\n          toastTimer = setTimeout(function () {\n            copyToast.classList.add('hidden');\n          }, 2000);\n        } catch (err) {\n          console.error('Copy failed:', err);\n        }\n      });\n\n      /* --------------------------------------------------------------------- */\n      /* 4. Floating Devanagari & Tamil Script Animation on Vanic Hover        */\n      /* --------------------------------------------------------------------- */\n      const vanicCard = document.getElementById('vanic-card');\n      const glyphLayer = document.getElementById('vanic-glyph-layer');\n      const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;\n\n      /* Expanded classical Sanskrit (Devanagari) & Tamil word pools */\n      const DEVANAGARI_WORDS = [\n        '\u0935\u093e\u0923\u0940', '\u0938\u0902\u0927\u093f', '\u0938\u0902\u0938\u094d\u0915\u0943\u0924', '\u0938\u092e\u093e\u0938', '\u0936\u092c\u094d\u0926', '\u0935\u094d\u092f\u093e\u0915\u0930\u0923',\n        '\u0905\u0915\u094d\u0937\u0930', '\u091b\u0928\u094d\u0926\u0938\u094d', '\u0915\u093e\u0935\u094d\u092f', '\u0915\u094b\u0936', '\u092d\u093e\u0937\u094d\u092f', '\u0938\u0942\u0924\u094d\u0930',\n        '\u0927\u094d\u0935\u0928\u093f', '\u0905\u0930\u094d\u0925', '\u0932\u093f\u092a\u093f', '\u092a\u093e\u0920', '\u0936\u094d\u0932\u094b\u0915', '\u092a\u094d\u0930\u0924\u094d\u092f\u092f',\n        '\u0927\u093e\u0924\u0941', '\u0928\u093f\u0918\u0923\u094d\u091f\u0941', '\u092a\u0926', '\u0935\u093e\u0915\u094d\u092f', '\u092a\u094d\u0930\u091c\u094d\u091e\u093e', '\u091c\u094d\u091e\u093e\u0928'\n      ];\n\n      const TAMIL_WORDS = [\n        '\u0ba4\u0bae\u0bbf\u0bb4\u0bcd', '\u0bae\u0bca\u0bb4\u0bbf', '\u0b85\u0bb1\u0bbf\u0bb5\u0bc1', '\u0b87\u0bb2\u0b95\u0bcd\u0b95\u0ba3\u0bae\u0bcd', '\u0b8e\u0bb4\u0bc1\u0ba4\u0bcd\u0ba4\u0bc1', '\u0b9a\u0bca\u0bb2\u0bcd',\n        '\u0baa\u0bca\u0bb0\u0bc1\u0bb3\u0bcd', '\u0baf\u0bbe\u0baa\u0bcd\u0baa\u0bc1', '\u0baa\u0bbe\u0b9f\u0bb2\u0bcd', '\u0b9a\u0b99\u0bcd\u0b95\u0bae\u0bcd', '\u0b95\u0bc1\u0bb1\u0bb3\u0bcd', '\u0ba8\u0bc2\u0bb2\u0bcd',\n        '\u0b95\u0bb5\u0bbf\u0ba4\u0bc8', '\u0b92\u0bb2\u0bbf', '\u0bb5\u0bb0\u0bbf', '\u0b89\u0bb0\u0bc8', '\u0baa\u0ba3\u0bcd\u0baa\u0bbe\u0b9f\u0bc1', '\u0b95\u0bb2\u0bcd\u0bb5\u0bbf',\n        '\u0bae\u0bc6\u0baf\u0bcd', '\u0b89\u0baf\u0bbf\u0bb0\u0bcd'\n      ];\n\n      const MAX_ACTIVE_GLYPHS = 18;\n      let spawnInterval = null;\n      let activeGlyphCount = 0;\n\n      function randomBetween(min, max) {\n        return Math.random() * (max - min) + min;\n      }\n\n      function pickPerimeterPosition() {\n        /* Distribute gently along top, left, right, and bottom perimeter zones */\n        const edge = Math.floor(Math.random() * 4);\n        if (edge === 0) {\n          return { x: randomBetween(4, 92), y: randomBetween(0, 14) };\n        } else if (edge === 1) {\n          return { x: randomBetween(0, 8), y: randomBetween(14, 86) };\n        } else if (edge === 2) {\n          return { x: randomBetween(88, 97), y: randomBetween(14, 86) };\n        }\n        return { x: randomBetween(6, 90), y: randomBetween(86, 98) };\n      }\n\n      function spawnIndicGlyph() {\n        if (!glyphLayer || prefersReducedMotion || activeGlyphCount >= MAX_ACTIVE_GLYPHS) {\n          return;\n        }\n\n        const isDevanagari = Math.random() < 0.55;\n        const pool = isDevanagari ? DEVANAGARI_WORDS : TAMIL_WORDS;\n        const word = pool[Math.floor(Math.random() * pool.length)];\n\n        const el = document.createElement('span');\n        el.className = 'floating-glyph ' + (isDevanagari ? 'devanagari' : 'tamil');\n        el.textContent = word;\n\n        const pos = pickPerimeterPosition();\n        const duration = randomBetween(3.0, 4.4);\n        const fontSize = randomBetween(0.95, 1.32);\n        const peakOpacity = randomBetween(0.48, 0.76);\n        const dxMid = randomBetween(-18, 18);\n        const dyMid = randomBetween(-22, -34);\n        const dxEnd = dxMid + randomBetween(-14, 14);\n        const dyEnd = randomBetween(-52, -74);\n\n        el.style.left = pos.x.toFixed(1) + '%';\n        el.style.top = pos.y.toFixed(1) + '%';\n        el.style.fontSize = fontSize.toFixed(2) + 'rem';\n        el.style.setProperty('--dur', duration.toFixed(2) + 's');\n        el.style.setProperty('--peak-opacity', peakOpacity.toFixed(2));\n        el.style.setProperty('--dx-mid', dxMid.toFixed(1) + 'px');\n        el.style.setProperty('--dy-mid', dyMid.toFixed(1) + 'px');\n        el.style.setProperty('--dx-end', dxEnd.toFixed(1) + 'px');\n        el.style.setProperty('--dy-end', dyEnd.toFixed(1) + 'px');\n        el.style.setProperty('--rot-start', randomBetween(-4, 4).toFixed(1) + 'deg');\n        el.style.setProperty('--rot-mid', randomBetween(-3, 3).toFixed(1) + 'deg');\n        el.style.setProperty('--rot-end', randomBetween(-4, 4).toFixed(1) + 'deg');\n\n        activeGlyphCount += 1;\n        glyphLayer.appendChild(el);\n\n        el.addEventListener('animationend', function () {\n          el.remove();\n          activeGlyphCount = Math.max(0, activeGlyphCount - 1);\n        }, { once: true });\n      }\n\n      function startGlyphs() {\n        if (prefersReducedMotion || spawnInterval) return;\n        /* Initial gentle burst of 3 words */\n        for (let i = 0; i < 3; i++) {\n          setTimeout(spawnIndicGlyph, i * 140);\n        }\n        spawnInterval = setInterval(spawnIndicGlyph, 360);\n      }\n\n      function stopGlyphs() {\n        if (spawnInterval) {\n          clearInterval(spawnInterval);\n          spawnInterval = null;\n        }\n      }\n\n      if (vanicCard) {\n        vanicCard.addEventListener('mouseenter', startGlyphs);\n        vanicCard.addEventListener('mouseleave', stopGlyphs);\n        vanicCard.addEventListener('focusin', startGlyphs);\n        vanicCard.addEventListener('focusout', stopGlyphs);\n      }\n    ";
+const SCRIPT = `
+  /* --------------------------------------------------------------------- */
+  /* 1. Light / Dark Mode Toggle with Persistence                          */
+  /* --------------------------------------------------------------------- */
+  const htmlEl = document.documentElement;
+  const themeToggleBtn = document.getElementById('theme-toggle');
+  const iconSun = document.getElementById('icon-sun');
+  const iconMoon = document.getElementById('icon-moon');
+
+  function syncThemeIcons() {
+    const isDark = htmlEl.classList.contains('dark');
+    if (iconSun && iconMoon) {
+      iconSun.classList.toggle('hidden', !isDark);
+      iconMoon.classList.toggle('hidden', isDark);
+    }
+  }
+
+  syncThemeIcons();
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', function () {
+      htmlEl.classList.toggle('dark');
+      syncThemeIcons();
+      try {
+        localStorage.setItem('ks-parchment-theme', htmlEl.classList.contains('dark') ? 'dark' : 'light');
+      } catch (err) {
+        /* Ignore storage errors */
+      }
+    });
+  }
+
+  /* --------------------------------------------------------------------- */
+  /* 2. Mobile Navigation Drawer                                           */
+  /* --------------------------------------------------------------------- */
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', function () {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      mobileMenuBtn.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    mobileNavLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        mobileMenu.classList.add('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  /* --------------------------------------------------------------------- */
+  /* 3. One-Click Email Copy (iFrame-safe via document.execCommand)        */
+  /* --------------------------------------------------------------------- */
+  const copyEmailBtn = document.getElementById('copy-email-btn');
+  const copyToast = document.getElementById('copy-toast');
+  let toastTimer = null;
+
+  if (copyEmailBtn) {
+    copyEmailBtn.addEventListener('click', function () {
+      try {
+        const temp = document.createElement('textarea');
+        temp.value = 'ikirtivardhan@gmail.com';
+        temp.setAttribute('readonly', '');
+        temp.style.position = 'absolute';
+        temp.style.left = '-9999px';
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand('copy');
+        document.body.removeChild(temp);
+
+        if (copyToast) {
+          copyToast.classList.remove('hidden');
+          if (toastTimer) clearTimeout(toastTimer);
+          toastTimer = setTimeout(function () {
+            copyToast.classList.add('hidden');
+          }, 2000);
+        }
+      } catch (err) {
+        console.error('Copy failed:', err);
+      }
+    });
+  }
+
+  /* --------------------------------------------------------------------- */
+  /* 4. Floating Devanagari & Tamil Script Animation on Vanic Hover        */
+  /* --------------------------------------------------------------------- */
+  const vanicCard = document.getElementById('vanic-card');
+  const glyphLayer = document.getElementById('vanic-glyph-layer');
+  const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const GLYPHS = [
+    { text: 'वाणी', script: 'devanagari' },
+    { text: 'संधि', script: 'devanagari' },
+    { text: 'संस्कृत', script: 'devanagari' },
+    { text: 'ज्ञान', script: 'devanagari' },
+    { text: 'अ', script: 'devanagari' },
+    { text: 'क', script: 'devanagari' },
+    { text: 'श्लोक', script: 'devanagari' },
+    { text: 'पद', script: 'devanagari' },
+    { text: 'தமிழ்', script: 'tamil' },
+    { text: 'மொழி', script: 'tamil' },
+    { text: 'அறிவு', script: 'tamil' },
+    { text: 'க', script: 'tamil' },
+    { text: 'இலக்கியம்', script: 'tamil' },
+    { text: 'சொல்', script: 'tamil' }
+  ];
+
+  const MAX_ACTIVE_GLYPHS = 18;
+  let spawnInterval = null;
+  let activeGlyphCount = 0;
+  let lastIndex = -1;
+
+  function rand(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
+  function spawnIndicGlyph() {
+    if (!glyphLayer || prefersReducedMotion || activeGlyphCount >= MAX_ACTIVE_GLYPHS) return;
+
+    let idx = Math.floor(Math.random() * GLYPHS.length);
+    if (idx === lastIndex) idx = (idx + 1) % GLYPHS.length;
+    lastIndex = idx;
+    const item = GLYPHS[idx];
+
+    const el = document.createElement('span');
+    el.className = 'floating-glyph ' + item.script;
+    el.textContent = item.text;
+
+    /* Spawns exclusively outside the card margins with outward drift */
+    const edgeRoll = Math.random();
+    let xPct = 0;
+    let yPct = 0;
+    let outwardX = 0;
+
+    if (edgeRoll < 0.35) {
+      /* Left margin outside card */
+      xPct = rand(0, 6);
+      yPct = rand(12, 88);
+      outwardX = rand(-24, -8);
+    } else if (edgeRoll < 0.70) {
+      /* Right margin outside card */
+      xPct = rand(92, 98);
+      yPct = rand(12, 88);
+      outwardX = rand(8, 24);
+    } else if (edgeRoll < 0.85) {
+      /* Top perimeter */
+      xPct = rand(8, 90);
+      yPct = rand(0, 8);
+      outwardX = rand(-12, 12);
+    } else {
+      /* Bottom perimeter */
+      xPct = rand(8, 90);
+      yPct = rand(90, 98);
+      outwardX = rand(-12, 12);
+    }
+
+    const sizeRem = rand(1.05, 1.95).toFixed(2);
+    const duration = rand(3.2, 4.6).toFixed(2);
+    const peakOpacity = rand(0.24, 0.42).toFixed(2);
+
+    el.style.left = xPct.toFixed(1) + '%';
+    el.style.top = yPct.toFixed(1) + '%';
+    el.style.fontSize = sizeRem + 'rem';
+    /* Color is left to your .floating-glyph.devanagari / .tamil CSS rules */
+    el.style.setProperty('--dur', duration + 's');
+    el.style.setProperty('--peak-opacity', peakOpacity);
+    el.style.setProperty('--rot-start', rand(-8, 8).toFixed(1) + 'deg');
+    el.style.setProperty('--rot-mid', rand(-5, 5).toFixed(1) + 'deg');
+    el.style.setProperty('--rot-end', rand(-8, 8).toFixed(1) + 'deg');
+    el.style.setProperty('--drift-mid-x', (outwardX * 0.6 + rand(-6, 6)).toFixed(1) + 'px');
+    el.style.setProperty('--drift-mid-y', (-rand(20, 36)).toFixed(1) + 'px');
+    el.style.setProperty('--drift-end-x', (outwardX + rand(-10, 10)).toFixed(1) + 'px');
+    el.style.setProperty('--drift-end-y', (-rand(50, 78)).toFixed(1) + 'px');
+
+    activeGlyphCount += 1;
+    glyphLayer.appendChild(el);
+
+    el.addEventListener('animationend', function () {
+      el.remove();
+      activeGlyphCount = Math.max(0, activeGlyphCount - 1);
+    }, { once: true });
+  }
+
+  function startGlyphs() {
+    if (prefersReducedMotion || spawnInterval) return;
+    spawnIndicGlyph();
+    setTimeout(spawnIndicGlyph, 140);
+    setTimeout(spawnIndicGlyph, 300);
+    spawnInterval = setInterval(spawnIndicGlyph, 340);
+  }
+
+  function stopGlyphs() {
+    if (spawnInterval) {
+      clearInterval(spawnInterval);
+      spawnInterval = null;
+    }
+  }
+
+  if (vanicCard) {
+    vanicCard.addEventListener('mouseenter', startGlyphs);
+    vanicCard.addEventListener('mouseleave', stopGlyphs);
+    vanicCard.addEventListener('focusin', startGlyphs);
+    vanicCard.addEventListener('focusout', function (e) {
+      if (!vanicCard.contains(e.relatedTarget)) stopGlyphs();
+    });
+  }
+`;
