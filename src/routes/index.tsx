@@ -1,3 +1,4 @@
+//श्री
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { editorialBody } from "@/portfolio/body";
@@ -125,9 +126,13 @@ const SCRIPT = `
     { text: 'वाणी', script: 'devanagari' },
     { text: 'संधि', script: 'devanagari' },
     { text: 'संस्कृत', script: 'devanagari' },
+     { text: 'गुरु', script: 'devanagari' },
+    { text: 'कर्म', script: 'devanagari' },
     { text: 'ज्ञान', script: 'devanagari' },
+     { text: 'श्री', script: 'devanagari' },
     { text: 'अ', script: 'devanagari' },
     { text: 'क', script: 'devanagari' },
+     { text: 'அல்லது', script: 'tamil' },
     { text: 'श्लोक', script: 'devanagari' },
     { text: 'पद', script: 'devanagari' },
     { text: 'தமிழ்', script: 'tamil' },
