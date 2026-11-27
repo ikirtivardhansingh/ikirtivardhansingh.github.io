@@ -233,7 +233,7 @@ export const editorialBody = `
         <h2 id="projects-heading" class="font-serif text-2xl sm:text-3xl font-semibold text-[var(--text-primary)]">
           Selected Projects
         </h2>
-        <span class="font-mono text-xs text-[var(--text-muted)]">Benchmarks, Robotics &amp; ML Systems</span>
+        <span class="font-mono text-xs text-[var(--text-muted)]">Full-stack, Benchmarks, Robotics &amp; ML Systems</span>
       </div>
 
       <!-- 4 Primary Project Cards -->
@@ -313,14 +313,10 @@ export const editorialBody = `
             </a>
           </div>
         </article>
-      </div>
-
-      <!-- Developer Tooling: Compact Card for FieldSense -->
-      <div class="pt-1">
-        <p class="font-mono text-[11px] uppercase tracking-wider text-[var(--text-muted)] mb-2.5">Developer Tooling</p>
-        <article class="editorial-card rounded-2xl p-5 sm:p-6 space-y-2">
+        <!-- 5. FieldSense -->
+        <article class="editorial-card rounded-2xl p-6 sm:p-7 space-y-3 md:col-span-2">
           <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
-            <h3 class="font-serif text-lg font-semibold text-[var(--text-primary)]">
+            <h3 class="font-serif text-xl font-semibold text-[var(--text-primary)]">
               FieldSense · Rule-Based VS Code Schema &amp; Documentation Extension
             </h3>
             <span class="font-mono text-xs text-[var(--text-muted)]">JavaScript · VS Code API · Zero-LLM</span>
